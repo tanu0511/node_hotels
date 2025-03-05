@@ -5,6 +5,7 @@ require('dotenv').config();
 
 const bodyParser = require('body-parser');
 app.use(bodyParser.json()); //req.body
+
 const PORT =process.env.PORT || 3000;
 
 const Person = require('./models/Person');
@@ -54,7 +55,7 @@ const menuItemsRoutes =require('./routes/menuItemsRoutes')
 app.use('/person',personRoutes)
 app.use('/menuItem',menuItemsRoutes)
 
-app.listen(3000,()=>{
+app.listen(PORT,()=>{
     console.log("server listening on 3000");
 // console.log("server listening 30000");
 
